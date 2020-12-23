@@ -2,8 +2,20 @@
 const burger = document.querySelector('.btn-burger');
 const navLeft = document.querySelector('.nav-left');
 const itemNav = document.querySelectorAll('nav-item');
-const ligne = document.querySelector('.content');
+const barre = document.querySelector('.barre');
 
 burger.addEventListener('click', () => {
-    ligne.classList.toggle('active');
-})
+    barre.classList.toggle('active');
+    navLeft.classList.toggle('menu-visible');
+});
+// faire apparaitre par un slide la barre de menu de navigation
+if (window.matchMedia('(max-width: 1300px')) {
+
+    itemNav .forEach(item => {
+        item .addEventListener('click', () => {
+            navLeft.classList.toggle('menu-visible');
+            barre.classList.toggle('acitve');
+        });
+    });
+    
+}
