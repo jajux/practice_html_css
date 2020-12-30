@@ -535,10 +535,9 @@ body{
     padding-left: 300px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     align-items: center;
-    
-}
+ }
+
 .item{
     margin:20px;
     width: 420px;
@@ -577,7 +576,7 @@ body{
     text-align: center;
     text-decoration: none;
     border: 1px solid #ddaf8f;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
     position: relative;
     overflow:hidden;
@@ -611,6 +610,95 @@ body{
     .item{
         height: 380px;
     }
+}
+/* SECTION COMPETENCES */
+.competences{
+    @import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;800;900&display=swap);
+      font-family: 'Lato', sans-serif;
+    }
+    .container-hexagon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      flex-wrap: wrap;
+      
+    }
+ .container-hexagon .hexagon{
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 50px 20px 70px;
+ }
+ .container-hexagon .hexagon::before{
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    height: 60px;
+    background:radial-gradient(rgba(0,0,0,0.15), transparent);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.container-hexagon .hexagon:hover:before{
+    opacity: 0.8;
+    transform: scale(0.8);
+}
+ .hexagon{
+     position: relative;
+     width: 350px;
+     height: 400px;
+ }
+ .competences .container-hexagon .form-hexagon{
+     position: absolute;
+     top:0;
+     left:0;
+     width: 100%;
+     height: 100%;
+     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 99%, 0 75%);
+    transition: 0.5s;
+    }
+ .competences .container-hexagon:hover .form-hexagon{
+     transform: translateY(-30px);
+ }
+ /* Ajustement des img dans l'hexagon */
+ .competences .container-hexagon .form-hexagon img{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     object-fit: cover;
+ }
+ h2{
+     margin-bottom: 20px;
+ }
+ .content ul li{
+     font-size: 20px;
+     padding-bottom: 20px;
+     list-style-type: none;
+     color:black;
+     text-transform: uppercase;
+ }
+ .competences .container-hexagon .form-hexagon .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #fff, rgba(3,169,244,0.5));
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+}
+.competences .container-hexagon:hover .form-hexagon .content{
+    opacity: 1;
 }
 
 
